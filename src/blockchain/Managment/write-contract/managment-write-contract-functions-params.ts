@@ -12,3 +12,4 @@ export type NewCrowdfundFunctionParams = {
   cfParams: IManagement.CrowdFundParamsStruct,
   overrides?: Overrides & { from?: PromiseOrValue<string> }
 };
+
