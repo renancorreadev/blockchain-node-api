@@ -87,3 +87,24 @@ Isso iniciará o servidor Node.js na porta 4444. Você pode acessar o projeto no
 
 ![ScreenShoot](./screenshoot.png)
 
+## Exemplo de como realizar consulta no front-end usando axios
+
+```ts
+ const handlegetPaused = () => {
+    axios.get("http://localhost:4444/management/ispaused", {
+      headers: {
+        "Content-Type": "application/json"
+      },
+      withCredentials: false
+    })
+    .then(response => {
+      const {data} = response; 
+
+      setIsPaused(data);
+    })
+    .catch(error => {
+      console.error(error); 
+    });
+  };
+```
+
